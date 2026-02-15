@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page-enter">
   <nav class="navbar">
     <a href="index.html" class="nav-brand">My Portfolio</a>
     <ul class="nav-links">
@@ -33,19 +33,26 @@
     <!-- Project 1 -->
     <article class="project-card">
       <h3>Creating Pong</h3>
-      <p class="project-meta">AP Computer Science Priciples | Winter 2026</p>
+      <p class="project-meta">AP Computer Science Principles | Winter 2026</p>
       <p class="project-description">
         I was tasked with creating a simple version of Pong using Pygame, which is a game engine within Python.
       </p>
-      <p class="project-learned"><strong>What I learned:</strong> I learned how to use Pygame to create games and use it as a visual representaion of my code.</p>
+      <p class="project-learned"><strong>What I learned:</strong> I learned how to use Pygame to create games and use it as a visual representation of my code.</p>
       <div class="project-redo">
         <h4>If I could redo this, I would…</h4>
         <p>Spend more time researching beforehand to understand the code better and know how to use it without having to stop and look up something I don't know.</p>
       </div>
       <div class="project-images">
-        <!-- Add screenshots: <img src="images/climate-paper-screenshot.jpg" alt="Paper preview"> -->
+        <!-- Add screenshots: <img src="images/pong-screenshot.jpg" alt="Pong preview"> -->
       </div>
-      <a href="assets/climate-paper.pdf" class="project-download" download>📄 Download PDF</a>
+      <div class="project-files">
+        <h4>📎 Project Files</h4>
+        <div class="project-files-list">
+          <a href="assets/pong-game.zip" class="project-file-link zip" download>Download .zip</a>
+          <a href="assets/pong-documentation.pdf" class="project-file-link pdf" download>Download PDF</a>
+        </div>
+        <p class="project-files-note">Put your PDF, .docx, or .zip files in the assets/ folder and update the links above.</p>
+      </div>
     </article>
 
     <!-- Project 2 -->
@@ -55,13 +62,20 @@
       <p class="project-description">
         An original short story written in the style of a classic 'stranded on an island' storyline.
       </p>
-      <p class="project-learned"><strong>What I learned:</strong> How to re-red over my wriing to make improvements and fix mistakes.</p>
+      <p class="project-learned"><strong>What I learned:</strong> How to reread over my writing to make improvements and fix mistakes.</p>
       <div class="project-redo">
         <h4>If I could redo this, I would…</h4>
         <p>Make it longer, so I could add more details and make it more interesting.</p>
       </div>
       <div class="project-images">
         <!-- Add screenshots as needed -->
+      </div>
+      <div class="project-files">
+        <h4>📎 Project Files</h4>
+        <div class="project-files-list">
+          <a href="assets/short-story.docx" class="project-file-link docx" download>Download .docx</a>
+          <a href="assets/short-story.pdf" class="project-file-link pdf" download>Download PDF</a>
+        </div>
       </div>
     </article>
 
@@ -77,6 +91,13 @@
         <h4>If I could redo this, I would…</h4>
         <p>Create a short video or animation to visualize the basketball path — it would make the project more engaging and show the math in action.</p>
       </div>
+      <div class="project-files">
+        <h4>📎 Project Files</h4>
+        <div class="project-files-list">
+          <a href="assets/algebra-project.pdf" class="project-file-link pdf" download>Download PDF</a>
+          <a href="assets/algebra-project.docx" class="project-file-link docx" download>Download .docx</a>
+        </div>
+      </div>
     </article>
 
     <!-- Project 4 -->
@@ -91,9 +112,16 @@
         <h4>If I could redo this, I would…</h4>
         <p></p>
       </div>
+      <div class="project-files">
+        <h4>📎 Project Files</h4>
+        <div class="project-files-list">
+          <a href="assets/business-project.pdf" class="project-file-link pdf" download>Download PDF</a>
+          <a href="assets/business-project.docx" class="project-file-link docx" download>Download .docx</a>
+        </div>
+      </div>
       <div class="media-embed">
         <!-- Add your video: <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe> -->
-        <p style="padding: 2rem; text-align: center; color: var(--color-text-muted);">Add your documentary video here (YouTube embed or hosted file)</p>
+        <p style="padding: 2rem; text-align: center; color: var(--color-text-muted);">Add your video here (YouTube embed or hosted file)</p>
       </div>
     </article>
   </main>

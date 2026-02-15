@@ -45,6 +45,45 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Page transition - fade in on load */
+body.page-enter {
+  animation: pageEnter 0.4s ease-out both;
+}
+
+body.page-exit {
+  animation: pageExit 0.3s ease-in forwards;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pageExit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
+@keyframes contentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Navigation */
 .navbar {
   position: sticky;
@@ -98,6 +137,11 @@ body {
   background: var(--color-accent-light);
 }
 
+.nav-links a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -119,6 +163,7 @@ body {
   max-width: 900px;
   margin: 0 auto;
   padding: var(--space-xl) var(--space-lg);
+  animation: contentFadeIn 0.5s ease-out 0.15s both;
 }
 
 /* Page header */
@@ -253,6 +298,11 @@ body {
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(13, 148, 136, 0.45);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
 .btn-secondary {
@@ -432,6 +482,80 @@ body {
 
 .project-download:hover {
   text-decoration: underline;
+}
+
+/* Project files section - PDF, DOCX links */
+.project-files {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  background: linear-gradient(135deg, rgba(13, 148, 136, 0.06) 0%, rgba(13, 148, 136, 0.02) 100%);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.project-files h4 {
+  margin: 0 0 var(--space-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.project-files-note {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: var(--space-xs);
+  opacity: 0.9;
+}
+
+.project-files-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.project-file-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all var(--transition);
+}
+
+.project-file-link:hover {
+  background: var(--color-accent-light);
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+.project-file-link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.project-file-link::before {
+  content: "📎";
+  font-size: 0.95em;
+}
+
+.project-file-link.pdf::before {
+  content: "📄";
+}
+
+.project-file-link.docx::before {
+  content: "📝";
+}
+
+.project-file-link.zip::before {
+  content: "📦";
 }
 
 /* Journal entries */
